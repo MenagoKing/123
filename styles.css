@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #333; /* Tło strony na ciemniejsze */
+    color: #fff; /* Kolor tekstu na jasny */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    position: relative;
+    height: 140px; /* Height for larger screens */
+}
+
+.logo {
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.desktop-nav {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.desktop-nav a,
+.nav-buttons a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+/* Dodaj to do istniejącego CSS */
+
+.logo img, .footer-logo img {
+    max-height: 150px; /* Dostosuj wysokość logo */
+    width: auto;
+}
+
+header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-buttons .btn {
+    display: inline-block;
+    padding: 8px 16px; /* Default padding */
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px; /* Default font size */
+    transition: all 0.3s ease;
+}
+
+.nav-buttons .login-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid #ff00ff; /* Różowa obwódka */
+}
+
+.nav-buttons .login-btn:hover {
+    background-color: #ff00ff;
+    color: white;
+}
+
+.nav-buttons .join-btn {
+    background-color: #ff00ff;
+    color: white;
+    border: 2px solid #ff00ff;
+}
+
+.nav-buttons .join-btn:hover {
+    background-color: #e600e6;
+    border-color: #e600e6;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 140px; /* Adjusted for increased header */
+    left: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+main {
+    padding: 0;
+}
+
+.video {
+    height: 200px;
+    background-color: #ccc;
+    margin: 0;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 0;
+    background-color: #2a2a2a; /* Dostosowanie tła do ciemniejszego */
+}
+
+.photo {
+    background-color: #444;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.pagination a {
+    text-decoration: none;
+    margin: 0 5px;
+    color: #aaa; /* Kolor tekstu nieaktywnych linków */
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.pagination a:hover {
+    color: #fff;
+}
+
+.pagination a.active {
+    color: #fff; /* Kolor aktywnej strony */
+    background-color: #ff00ff; /* Różowe tło aktywnej strony */
+    border-radius: 50%; /* Zaokrąglone tło */
+    padding: 5px 10px; /* Dostosowanie paddingu dla aktywnej strony */
+}
+
+.pagination a.arrow {
+    font-size: 30px; /* Zwiększony rozmiar strzałek */
+    color: #fff; /* Kolor strzałek */
+}
+
+.access-button {
+    display: block;
+    width: 90%;
+    max-width: 400px; /* Maksymalna szerokość przycisku */
+    margin: 25px auto;
+    padding: 25px 0;
+    background-color: #ff00ff; /* Matching the pink color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 30px; /* Zwiększony rozmiar czcionki */
+    font-weight: bold; /* Pogrubienie czcionki */
+    transition: background-color 0.3s;
+}
+
+.access-button:hover {
+    background-color: #e600e6;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+}
+
+.footer-logo {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.footer-links li {
+    margin: 5px 15px; /* Adjusted margin for spacing */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 120px; /* Reduced height for smaller screens */
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-buttons {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav-buttons .btn {
+        padding: 6px 12px; /* Zmniejszony padding dla mniejszych ekranów */
+        font-size: 12px; /* Zmniejszony rozmiar czcionki dla mniejszych ekranów */
+    }
+
+    .desktop-nav {
+        display: none; /* Ukrycie desktopowej nawigacji na mniejszych ekranach */
+    }
+
+    .mobile-nav.open {
+        display: flex;
+    }
+
+    .mobile-nav {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 120px; /* Adjusted for reduced header */
+        left: 0;
+        right: 0;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .mobile-nav a {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #444;
+    }
+
+    .mobile-nav a:last-child {
+        border-bottom: none;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr 1fr; /* 2 kolumny na mniejszych ekranach */
+        grid-template-rows: repeat(5, 150px); /* 5 wierszy na mniejszych ekranach */
+    }
+
+    .photo:nth-child(n+11) {
+        display: none; /* Ukrycie dodatkowych zdjęć na mniejszych ekranach */
+    }
+
+    .video {
+        display: block; /* Wyświetl wideo na mniejszych ekranach */
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        height: 140px; /* Height for larger screens */
+        justify-content: space-between;
+    }
+
+    .nav-buttons .btn {
+        padding: 12px 24px; /* Większy padding dla większych ekranów */
+        font-size: 18px; /* Większy rozmiar czcionki dla większych ekranów */
+    }
+
+    .desktop-nav {
+        display: flex;
+        flex: 1;
+        font-size: large;
+        font-weight: bolder;
+    }
+
+    .nav-buttons {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 kolumny na większych ekranach */
+        grid-template-rows: repeat(4, 150px); /* 4 wiersze na większych ekranach */
+    }
+
+    .video {
+        display: none; /* Ukrycie wideo na większych ekranach */
+    }
+}

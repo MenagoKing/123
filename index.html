@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="menu-icon">&#9776;</div>
+        <div class="logo">
+            <img src="images/kokologo.png" alt="Logo">
+        </div>
+        <nav class="desktop-nav">
+            <a href="#">Home</a>
+            <a href="#">My Videos</a>
+        </nav>
+        <div class="nav-buttons">
+            <a href="#" class="btn login-btn">Login</a>
+            <a href="#" class="btn join-btn">Join Now</a>
+        </div>
+    </header>
+    <nav class="mobile-nav">
+        <a href="#">Home</a>
+        <a href="#">My Videos</a>
+    </nav>
+    
+    <main>
+        <div class="video">Video</div>
+        <div class="photo-grid">
+            <div class="photo">Photo 1</div>
+            <div class="photo">Photo 2</div>
+            <div class="photo">Photo 3</div>
+            <div class="photo">Photo 4</div>
+            <div class="photo">Photo 5</div>
+            <div class="photo">Photo 6</div>
+            <div class="photo">Photo 7</div>
+            <div class="photo">Photo 8</div>
+            <div class="photo">Photo 9</div>
+            <div class="photo">Photo 10</div>
+            <div class="photo">Photo 11</div>
+            <div class="photo">Photo 12</div>
+            <div class="photo">Photo 13</div>
+            <div class="photo">Photo 14</div>
+            <div class="photo">Photo 15</div>
+            <div class="photo">Photo 16</div>
+        </div>
+        <div class="pagination">
+            <a href="#" class="arrow">&#171;</a>
+            <a href="#" class="arrow">&#8249;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#" class="arrow">&#8250;</a>
+            <a href="#" class="arrow">&#187;</a>
+        </div>
+        <button class="access-button">Get Access Now</button>
+        <footer>
+            <div class="footer-logo">
+                <img src="images/kokologo.png" alt="Logo">
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Member Login</a></li>
+                <li><a href="#">Content Removal</a></li>
+            </ul>
+        </footer>
+    </main>
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', () => {
+            document.querySelector('.mobile-nav').classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
